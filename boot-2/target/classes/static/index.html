@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Vehicle DataTable</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/webjars/datatables/1.10.20/css/jquery.dataTables.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Vehicle DataTable</h2>
+    <table id="vehicleTable" class="display" style="width:100%">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Type</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+
+<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="/webjars/datatables/1.10.20/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#vehicleTable').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "ajax": {
+                "url": "/api/v1/dataTables",
+                "type": "POST",
+                "contentType": "application/json",
+                "data": function(d) {
+                    return JSON.stringify(d);
+                }
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "name" },
+                { "data": "type" }
+            ]
+        });
+    });
+</script>
+</body>
+</html>
