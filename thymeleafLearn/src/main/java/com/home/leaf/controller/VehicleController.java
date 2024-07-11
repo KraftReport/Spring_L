@@ -1,7 +1,7 @@
-package com.home.boot.boot2.model.controller;
+package com.home.leaf.controller;
 
-import com.home.boot.boot2.model.Vehicle;
-import com.home.boot.boot2.model.service.VehicleService;
+import com.home.leaf.model.Vehicle;
+import com.home.leaf.service.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.datatables.mapping.DataTablesInput;
 import org.springframework.data.jpa.datatables.mapping.DataTablesOutput;

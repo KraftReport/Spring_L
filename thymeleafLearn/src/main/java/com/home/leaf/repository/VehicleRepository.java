@@ -1,6 +1,6 @@
-package com.home.boot.boot2.model.repository;
+package com.home.leaf.repository;
 
-import com.home.boot.boot2.model.Vehicle;
+import com.home.leaf.model.Vehicle;
 import org.springframework.data.jpa.datatables.mapping.DataTablesInput;
 import org.springframework.data.jpa.datatables.mapping.DataTablesOutput;
 import org.springframework.data.jpa.datatables.repository.DataTablesRepository;
