@@ -1,0 +1,6 @@
+com\home\boot\service\StudentService.class
+com\home\boot\model\Student.class
+com\home\boot\AmigosBootsApplication.class
+com\home\boot\config\StudentConfig.class
+com\home\boot\controller\StudentController.class
+com\home\boot\repository\StudentRepository.class
