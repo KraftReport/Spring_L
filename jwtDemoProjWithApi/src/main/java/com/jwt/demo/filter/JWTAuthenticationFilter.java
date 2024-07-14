@@ -16,6 +16,9 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
+
+
+
 @Component
 @RequiredArgsConstructor
 public class JWTAuthenticationFilter extends OncePerRequestFilter {
@@ -28,18 +31,19 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
                                     @NonNull HttpServletResponse response,
                                     @NonNull FilterChain filterChain) throws ServletException, IOException {
 
-        final var authHeader = request.getHeader("Authorization");
-        final var jwt = authHeader.substring(7);
-        final var userEmail = jwtService.extractUserName(jwt);
+        final String authHeader = request.getHeader("Authorization");
 
-        if(!authHeader.startsWith("Bearer")){
-            filterChain.doFilter(request,response);
+        if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+            filterChain.doFilter(request, response);
             return;
         }
 
-        if(userEmail != null && SecurityContextHolder.getContext().getAuthentication() == null){
+        final String jwt = authHeader.substring(7);
+        final String userEmail = jwtService.extractUserName(jwt);
+
+        if (userEmail != null && SecurityContextHolder.getContext().getAuthentication() == null) {
             var userDetails = this.userDetailsService.loadUserByUsername(userEmail);
-            if(jwtService.isTokenIsValid(jwt,userDetails)){
+            if (jwtService.isTokenIsValid(jwt, userDetails)) {
                 var authToken = new UsernamePasswordAuthenticationToken(
                         userDetails,
                         null,
@@ -52,7 +56,6 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
             }
         }
 
-        filterChain.doFilter(request,response);
-
+        filterChain.doFilter(request, response);
     }
 }
