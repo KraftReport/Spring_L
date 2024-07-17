@@ -21,4 +21,6 @@ public class User {
 	private String password;
 	@Enumerated(EnumType.STRING)
 	private ROLE role;
+	@OneToMany(mappedBy = "user")
+	private List<Review> reviews;
 }
