@@ -1,5 +1,7 @@
 package com.jwt.demo.DTO;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.*;
 
 @Getter
@@ -8,5 +10,8 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class AuthenticationResponse {
-    private String token;
+	@JsonProperty("access_token")
+    private String accessToken;
+    @JsonProperty("refresh_token")
+    private String refreshToken;
 }
