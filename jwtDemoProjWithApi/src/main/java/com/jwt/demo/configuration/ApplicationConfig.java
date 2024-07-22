@@ -1,9 +1,12 @@
 package com.jwt.demo.configuration;
 
 import com.jwt.demo.repository.UserRepository;
+import com.jwt.demo.service.ApplicationAuditAware;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -19,6 +22,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class ApplicationConfig {
 
     private final UserRepository userRepository;
+    
+    @Bean
+    public AuditorAware<Long> auditorAware(){
+    	return new ApplicationAuditAware();
+    }
 
     @Bean
     public UserDetailsService userDetailsService(){
