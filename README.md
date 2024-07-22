@@ -16,3 +16,5 @@ spring-audit-aware
 
 spring-security-basic-auth
 
+spring-csv-database-mapping
+
