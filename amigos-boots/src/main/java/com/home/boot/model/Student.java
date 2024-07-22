@@ -1,6 +1,8 @@
 package com.home.boot.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -9,6 +11,8 @@ import java.time.Period;
 @Entity
 @Data
 @Table
+@Builder
+@AllArgsConstructor
 public class Student {
     @Id
     @SequenceGenerator(name = "student_sequence", sequenceName = "student_name", allocationSize = 1)

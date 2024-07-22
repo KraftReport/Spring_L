@@ -1,7 +1,13 @@
 package com.home.boot.service;
 
 import com.home.boot.model.Student;
+import com.home.boot.model.StudentCsvResperentation;
 import com.home.boot.repository.StudentRepository;
+import com.opencsv.bean.CsvToBean;
+import com.opencsv.bean.CsvToBeanBuilder;
+import com.opencsv.bean.HeaderColumnNameMappingStrategy;
+import com.opencsv.bean.concurrent.ProcessCsvLine;
+
 import jakarta.transaction.Transactional;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -9,11 +15,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -21,6 +38,7 @@ public class StudentService {
 
     @Autowired
     private final StudentRepository studentRepository;
+    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     public List<Student> returnStudentList(){
         return studentRepository.findAll();
@@ -75,4 +93,33 @@ public class StudentService {
             student.setEmail(email);
         }
     }
+    
+    
+	public Long uploadCsv(MultipartFile file) throws IOException {
+		Set<Student> students = parseCsv(file);
+		studentRepository.saveAll(students);
+		return (long) students.size();
+	}
+	
+	private Set<Student> parseCsv(MultipartFile file) throws IOException{
+		try(Reader reader = new BufferedReader(new InputStreamReader(file.getInputStream()))){
+			HeaderColumnNameMappingStrategy<StudentCsvResperentation> strategy = new HeaderColumnNameMappingStrategy<>();
+			strategy.setType(StudentCsvResperentation.class);
+			CsvToBean<StudentCsvResperentation> csvToBean = new CsvToBeanBuilder<StudentCsvResperentation>(reader)
+					.withMappingStrategy(strategy)
+					.withIgnoreEmptyLine(true)
+					.withIgnoreLeadingWhiteSpace(true)
+					.build();
+			return csvToBean.parse()
+                    .stream()
+                    .map(csvLine -> Student.builder()
+                    		.name(csvLine.getName())
+                    		.email(csvLine.getEamil())
+                    		.dob(LocalDate.parse(csvLine.getDob(),formatter))
+                    		.age(Period.between(LocalDate.parse(csvLine.getDob(),formatter), LocalDate.now()).getYears())
+                    		.build()
+					)
+                    .collect(Collectors.toSet());
+		}
+	}
 }
