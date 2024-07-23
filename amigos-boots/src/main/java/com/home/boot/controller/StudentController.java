@@ -28,6 +28,11 @@ public class StudentController {
     public List<Student> returnStudentList(){
         return  studentService.returnStudentList();
     }
+    
+    @GetMapping("/{id}")
+    public ResponseEntity<Student> getOne(@PathVariable("id") String id){
+    	return ResponseEntity.ok(studentService.getStudentById(Long.valueOf(id)).orElse(null));
+    }
 
     @PostMapping
     public void addStudent(@RequestBody Student student){

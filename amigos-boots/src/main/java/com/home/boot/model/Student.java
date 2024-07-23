@@ -19,6 +19,7 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "student_sequence")
     private Long id;
     private String name;
+    @Column(unique = true)
     private String email;
     private LocalDate dob;
     @Transient
