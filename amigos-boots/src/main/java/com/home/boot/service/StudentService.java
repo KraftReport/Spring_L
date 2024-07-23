@@ -43,6 +43,10 @@ public class StudentService {
     public List<Student> returnStudentList(){
         return studentRepository.findAll();
     }
+    
+    public Optional<Student> getStudentById(Long Id) {
+    	return Optional.ofNullable(studentRepository.findById(Id).orElseThrow(()->new RuntimeException("student with provied id is not found")));
+    }
 
     public void addStudent(Student student){
         studentRepository.save(student);
@@ -50,7 +54,7 @@ public class StudentService {
 
     public void updateStudent(Student student) {
         Long student1 = student.getId();
-        Student student_id = studentRepository.findById(student1).orElseThrow();
+        Student student_id = studentRepository.findById(student1).orElseThrow(()->new RuntimeException("student not found with "+student1));
         student_id.setId(student.getId());
         student_id.setName(student.getName());
         student_id.setAge(student.getAge());
@@ -92,6 +96,7 @@ public class StudentService {
             }
             student.setEmail(email);
         }
+        studentRepository.save(student);
     }
     
     
