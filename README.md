@@ -18,3 +18,7 @@ spring-security-basic-auth
 
 spring-csv-database-mapping
 
+junit-mockito
+
+spring-boot-unit-testing-integration-testing
+
