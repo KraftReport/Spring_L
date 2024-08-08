@@ -41,6 +41,15 @@ public class ContactService {
 
     }
 
+    public String uploadPhoto(String id,MultipartFile image){
+        log.info("photo is saved in contact id {}",id);
+        var contact = getContact(id);
+        var photoUrl = photoFunction.apply(id,image);
+        contact.setPhotoUrl(photoUrl);
+        contactRepository.save(contact);
+        return photoUrl;
+    }
+
     private final Function<String, String> fileExtension = filename -> Optional.of(filename).filter(f -> f.contains("."))
             .map(name -> "." + name.substring(filename.lastIndexOf(".") + 1)).orElse(".png");
 
@@ -52,7 +61,7 @@ public class ContactService {
                 Files.createDirectories(location);
             }
             Files.copy(image.getInputStream(), location.resolve(filename), REPLACE_EXISTING);
-            return ServletUriComponentsBuilder.fromCurrentContextPath().path("/contacts/images/" + filename).toUriString();
+            return ServletUriComponentsBuilder.fromCurrentContextPath().path("/contact/images/" + filename).toUriString();
         } catch (Exception exception) {
             throw new RuntimeException("image cannot save");
         }
