@@ -10,7 +10,9 @@ import lombok.Setter;
 @RequiredArgsConstructor
 @AllArgsConstructor
 public class MovieCatalogItem {
-    private String id;
-    private String name;
-    private String description;
+    private Long id;
+    private Long userId;
+    private Long movieId;
+    private String movieName;
+    private Long movieRating;
 }
