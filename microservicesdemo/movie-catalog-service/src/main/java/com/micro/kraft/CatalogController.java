@@ -2,6 +2,7 @@ package com.micro.kraft;
 
 import lombok.RequiredArgsConstructor;
 import org.apache.coyote.Response;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,6 +12,7 @@ import org.springframework.web.client.RestClient;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
 
+import java.lang.reflect.ParameterizedType;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -29,6 +31,11 @@ public class CatalogController {
             new MovieCatalogItem(3L,1L,1L,null,null),
             new MovieCatalogItem(2L,2L,1L,null,null)
     );
+
+    @GetMapping("/ratingList/{userId}")
+    public ResponseEntity<List<Rating>> getRatingList(@PathVariable("userId")String userId){
+       return ResponseEntity.ok(getRatingList(1L));
+    }
 
     @GetMapping("/{userId}")
     public ResponseEntity<List<MovieCatalogItem>> getMovieCatalogItems(@PathVariable("userId")String userId){
@@ -58,6 +65,15 @@ public class CatalogController {
                 .uri("http://localhost:8083/ratingData/"+id)
                 .retrieve()
                 .bodyToMono(Rating.class)
+                .block();
+    }
+
+    private List<Rating> getRatingList(Long id){
+        return builder.build()
+                .get()
+                .uri("http://localhost:8083/ratingData/ratingList")
+                .retrieve()
+                .bodyToMono( new ParameterizedTypeReference <List<Rating>>(){})
                 .block();
     }
 }

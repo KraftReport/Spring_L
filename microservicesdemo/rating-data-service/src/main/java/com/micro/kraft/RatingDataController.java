@@ -22,4 +22,10 @@ public class RatingDataController {
     public ResponseEntity<Rating> getMovieRating(@PathVariable("movieId")String movieId){
         return ResponseEntity.ok(ratingList.stream().filter(r -> r.getMovieId().equals(Long.valueOf(movieId))).findFirst().orElse(null));
     }
+    @GetMapping("/ratingList")
+    public ResponseEntity<RatingList> getRatingList(@PathVariable("userId")String userId){
+        var rating = new RatingList();
+        rating.setRatingList(ratingList);
+        return ResponseEntity.ok(rating);
+    }
 }
