@@ -33,7 +33,7 @@ public class CatalogController {
     );
 
     @GetMapping("/ratingList/{userId}")
-    public ResponseEntity<List<Rating>> getRatingList(@PathVariable("userId")String userId){
+    public ResponseEntity<RatingList> getRatingList(@PathVariable("userId")String userId){
        return ResponseEntity.ok(getRatingList(1L));
     }
 
@@ -68,12 +68,12 @@ public class CatalogController {
                 .block();
     }
 
-    private List<Rating> getRatingList(Long id){
+    private RatingList getRatingList(Long id){
         return builder.build()
                 .get()
                 .uri("http://localhost:8083/ratingData/ratingList")
                 .retrieve()
-                .bodyToMono( new ParameterizedTypeReference <List<Rating>>(){})
+                .bodyToMono(RatingList.class)
                 .block();
     }
 }
