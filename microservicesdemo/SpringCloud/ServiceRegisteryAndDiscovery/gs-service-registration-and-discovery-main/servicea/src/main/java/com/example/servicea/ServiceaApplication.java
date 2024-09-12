@@ -1,14 +1,13 @@
-package com.micro.kraft;
+package com.example.servicea;
 
-import com.netflix.discovery.EurekaNamespace;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MovieInfoServiceApplication {
+public class ServiceaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MovieInfoServiceApplication.class, args);
+		SpringApplication.run(ServiceaApplication.class, args);
 	}
 
 }
