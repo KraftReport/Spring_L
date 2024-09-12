@@ -1,14 +1,15 @@
 package com.micro.kraft;
 
-import com.netflix.discovery.EurekaNamespace;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
-public class MovieInfoServiceApplication {
+@EnableEurekaServer
+public class DiscoverServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MovieInfoServiceApplication.class, args);
+		SpringApplication.run(DiscoverServiceApplication.class, args);
 	}
 
 }
