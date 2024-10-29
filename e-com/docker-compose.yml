@@ -39,21 +39,26 @@ services:
       - mongo:/data
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: admin
+      MONGO_INITDB_ROOT_PASSWORD: root
+    networks:
+      - microservices-net
+    restart: unless-stopped
 
   mongo-express:
     image: mongo-express
     container_name: mongo_express
     restart: always
     ports:
-      - 8081:8081
+      - 8082:8081
     environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
-      ME_CONFIG_MONGODB_ADMINPASSWORD: admin
+      ME_CONFIG_MONGODB_ADMINUSERNAME: "admin"
+      ME_CONFIG_MONGODB_ADMINPASSWORD: "root" 
       ME_CONFIG_MONGODB_SERVER: mongodb
     depends_on:
       - mongodb
-
+    networks:
+      - microservices-net
+    command: ["sh", "-c", "sleep 10 && npm start"]
 
   mail-dev:
     container_name: ms-mail-dev
@@ -61,6 +66,8 @@ services:
     ports:
       - 1080:1080
       - 1025:1025
+    networks:
+      - microservices-net
 
 networks:
   microservices-net:
