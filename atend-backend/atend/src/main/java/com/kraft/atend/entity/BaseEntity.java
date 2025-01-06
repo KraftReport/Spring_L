@@ -20,5 +20,5 @@ public class BaseEntity {
 	@Column(updatable = false)
 	private LocalDateTime createdDate = LocalDateTime.now();
 	private LocalDateTime updatedDate;
-	private boolean isDeleted;
+	private boolean isDeleted = false;
 }
