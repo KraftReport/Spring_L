@@ -8,4 +8,5 @@ import com.kraft.atend.entity.ApplicationUser;
 @Repository
 public interface AuthRepository extends JpaRepository<ApplicationUser, Long> {
 
+	public ApplicationUser findByGoogleId(String googleId);
 }

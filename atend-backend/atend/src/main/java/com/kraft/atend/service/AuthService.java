@@ -15,12 +15,16 @@ public class AuthService {
 	
 	private final AuthRepository authRepository;
 	
-	public boolean registerUser(UserRegisterDto userRegisterDto) {
+	public ApplicationUser authenticate(UserRegisterDto userRegisterDto) {
+		var user = authRepository.findByGoogleId(userRegisterDto.googleId());
+		if(user!=null) {
+			return user;
+		}
 		var entity = new ApplicationUser();
 		entity.setName(userRegisterDto.name());
 		entity.setEmail(userRegisterDto.email());
 		entity.setGoogleId(userRegisterDto.googleId());
-		return authRepository.save(entity) != null;
-	}
+		return authRepository.save(entity);
+	} 
 
 }
