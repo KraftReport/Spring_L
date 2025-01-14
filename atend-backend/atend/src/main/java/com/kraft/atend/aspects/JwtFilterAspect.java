@@ -17,7 +17,7 @@ import lombok.RequiredArgsConstructor;
 public class JwtFilterAspect {
 
 	@Value("${jwt.secret.key}")
-	private final String SECRET_KEY;
+	private String SECRET_KEY;
 	private final HttpServletRequest httpServletRequest;
 
 	@Before("@annotation(JwtFilter)")
