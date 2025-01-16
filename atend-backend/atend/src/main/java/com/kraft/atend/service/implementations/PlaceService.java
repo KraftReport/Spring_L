@@ -24,15 +24,15 @@ public class PlaceService implements PlaceHandler {
 	private final PlaceRepository placeRepository;
 
 	@Override
-	public boolean registerNewPlace(PlaceRegisterDto placeRegisterDto) throws IOException {
+	public long registerNewPlace(PlaceRegisterDto placeRegisterDto) throws IOException {
 		var entity = new Place();
 		
 		entity.setName(placeRegisterDto.name());
 		entity.setPhotoPath(uploadFile(placeRegisterDto.rawFile(), placeRegisterDto.name()));
-		entity.setLattitude(placeRegisterDto.lattitude());
+		entity.setLatitude(placeRegisterDto.lattitude());
 		entity.setLongitude(placeRegisterDto.longitude());
 		
-		return !placeRepository.save(entity).equals(null);
+		return placeRepository.save(entity).getId();
 	}
 
 	private String uploadFile(MultipartFile file, String name) throws IOException { 

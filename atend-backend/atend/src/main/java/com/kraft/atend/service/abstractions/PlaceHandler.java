@@ -9,5 +9,5 @@ import com.kraft.atend.model.PlaceRegisterDto;
 @Service
 public interface PlaceHandler {
 
-	public boolean registerNewPlace(PlaceRegisterDto placeRegisterDto) throws IOException;
+	public long registerNewPlace(PlaceRegisterDto placeRegisterDto) throws IOException;
 }
