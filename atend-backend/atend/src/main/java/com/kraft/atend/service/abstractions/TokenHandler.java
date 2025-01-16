@@ -1,4 +1,4 @@
-package com.kraft.atend.service;
+package com.kraft.atend.service.abstractions;
 
 import org.springframework.stereotype.Service;
 

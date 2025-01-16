@@ -1,8 +1,11 @@
-package com.kraft.atend.service;
+package com.kraft.atend.service.implementations;
  
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
+import com.kraft.atend.service.abstractions.TokenHandler;
+
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 
@@ -18,10 +21,10 @@ public class TokenService extends TokenHandler {
 	private Long  expiration;
 	@Value("${jwt.secret.key}")
 	private String secretKey;
+	private Key key ;
 	
-	private final Key key = Keys.hmacShaKeyFor(secretKey.getBytes());
-
 	public String generateToken(Long id) {
+		intializeKey();
 		return Jwts.builder()
 				.setSubject("forapicallfromclientapp")
 				.claim("user-id", id)
@@ -30,4 +33,7 @@ public class TokenService extends TokenHandler {
 				.compact(); 
 	}
 
+	private void intializeKey() {
+		 key = Keys.hmacShaKeyFor(secretKey.getBytes());
+	}
 }

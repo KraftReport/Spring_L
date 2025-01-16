@@ -15,8 +15,8 @@ import com.kraft.atend.annotations.JwtFilter;
 import com.kraft.atend.model.UserRegisterDto;
 import com.kraft.atend.model.UserRegisterModel;
 import com.kraft.atend.service.AuthService;
-import com.kraft.atend.service.OauthHandler;
-import com.kraft.atend.service.TokenHandler;
+import com.kraft.atend.service.abstractions.OauthHandler;
+import com.kraft.atend.service.abstractions.TokenHandler;
 
 import lombok.RequiredArgsConstructor;
 
