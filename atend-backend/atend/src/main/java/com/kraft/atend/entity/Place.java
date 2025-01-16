@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 public class Place extends BaseEntity {
 	private String name;
-	private Double lattitude;
+	private Double latitude;
 	private Double longitude;
 	private String photoPath; 
 }
