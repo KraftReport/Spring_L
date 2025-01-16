@@ -1,5 +1,7 @@
 package com.kraft.atend.service;
 
+import java.time.LocalDateTime;
+
 import org.springframework.stereotype.Service;
 
 import com.kraft.atend.entity.ApplicationUser;
@@ -18,6 +20,8 @@ public class AuthService {
 	public ApplicationUser authenticate(UserRegisterDto userRegisterDto) {
 		var user = authRepository.findByGoogleId(userRegisterDto.googleId());
 		if(user!=null) {
+			user.setUpdatedDate(LocalDateTime.now());
+			authRepository.save(user);
 			return user;
 		}
 		var entity = new ApplicationUser();
