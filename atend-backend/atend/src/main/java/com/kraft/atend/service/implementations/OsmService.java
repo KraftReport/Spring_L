@@ -24,14 +24,14 @@ public class OsmService implements OsmHandler {
 	@Override
 	public long confirmLocation(OsmObject osmObject) {
 		var foundRecord = osmRepository.findByPlaceId(osmObject.getPlaceId()).orElse(null);
-		if(foundRecord.equals(null)) {
+		if(foundRecord==null) {
 			return osmRepository.save(osmObject).getPlaceId();
 		}
 		return foundRecord.getPlaceId();
 	}
 
 	@Override
-	public OsmObject callOsmApi(String latitude, String longitude) {
+	public OsmObject callOsmApi(double latitude, double longitude) {
 		return restTemplate.getForObject(String.format(osmReverseApi, latitude, longitude), OsmObject.class);
 	}
 

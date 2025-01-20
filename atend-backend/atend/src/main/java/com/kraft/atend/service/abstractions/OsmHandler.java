@@ -9,6 +9,6 @@ public interface OsmHandler {
 
 	public long confirmLocation(OsmObject osmObject);
 	
-	public OsmObject callOsmApi(String latitude,String longitude);
+	public OsmObject callOsmApi(double latitude,double longitude);
 	
 }
