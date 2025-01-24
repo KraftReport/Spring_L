@@ -5,12 +5,15 @@ import java.io.IOException;
 import org.springframework.stereotype.Service;
 
 import com.kraft.atend.entity.CheckIn;
+import com.kraft.atend.entity.PlaceImages;
 import com.kraft.atend.model.CheckInDto;
 import com.kraft.atend.model.PlaceRegisterDto;
 import com.kraft.atend.repository.CheckInRepository;
-import com.kraft.atend.repository.PlaceRepository;
+import com.kraft.atend.repository.OsmRepository;
+import com.kraft.atend.repository.PlaceImagesRepository;
 import com.kraft.atend.service.abstractions.CheckInHandler;
-import com.kraft.atend.service.abstractions.PlaceHandler;
+import com.kraft.atend.service.abstractions.OsmHandler;
+import com.kraft.atend.service.abstractions.FileHandler;
 
 import lombok.RequiredArgsConstructor;
 
@@ -18,34 +21,37 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class CheckInService implements CheckInHandler {
 	
-	private final PlaceHandler placeHandler;
-	private final PlaceRepository placeRepository;
+	private final FileHandler fileHandler; 
 	private final CheckInRepository checkInRepository;
-
+	private final OsmRepository osmRepository;
+	private final OsmHandler osmHandler;
+	private final PlaceImagesRepository placeImagesRepository;
+	
 	@Override
 	public boolean checkIn(CheckInDto checkInDto) throws IOException {
 		
-		var place = placeRepository.findByLatitudeAndLongitude(checkInDto.latitude(), checkInDto.longitude()).orElse(null);
+		var osmResponse = osmHandler.callOsmApi(checkInDto.latitude(), checkInDto.longitude());
+		var osmRecord = osmRepository.findByPlaceId(osmResponse.getPlaceId()).orElse(null);
 		
-		if(!place.equals(null)) {
-			var entity = new CheckIn();
-			entity.setPlaceId(place.getId());
-			entity.setUserId(checkInDto.userId());
-			return !checkInRepository.save(entity).equals(null);
+		if(osmRecord == null) {
+			osmRepository.save(osmResponse);
 		}
 		
-		var dto = new PlaceRegisterDto(
-				checkInDto.placeName(),
-				checkInDto.latitude(),
-				checkInDto.longitude(),
-				checkInDto.rawFile());
-		var id =  placeHandler.registerNewPlace(dto);
+		var savedImagePath = fileHandler.uploadPlaceImageInResourceFolder(checkInDto.rawFile(),osmResponse.getName());
 		
-		var entity = new CheckIn();
-		entity.setPlaceId(id);
-		entity.setUserId(checkInDto.userId());
+		var checkInRecord = new CheckIn();
 		
-		return !checkInRepository.save(entity).equals(null);
+		checkInRecord.setUserId(checkInDto.userId());
+		checkInRecord.setPlaceId(osmRecord.getPlaceId());
+		checkInRecord.setCheckInPhoto(savedImagePath);
+		
+		var placesImageRecord = new PlaceImages();
+		
+		placesImageRecord.setImageFilePath(savedImagePath);
+		placesImageRecord.setPlaceId(osmResponse.getPlaceId());
+		
+ 
+		return checkInRepository.save(checkInRecord) != null && placeImagesRepository.save(placesImageRecord) != null;
 	}
-
+ 
 }

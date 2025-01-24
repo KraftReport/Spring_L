@@ -8,7 +8,7 @@ import com.kraft.atend.model.CheckInDto;
 
 @Service
 public interface CheckInHandler {
-
+ 
 	public boolean checkIn(CheckInDto checkInDto) throws IOException;
 	
 }

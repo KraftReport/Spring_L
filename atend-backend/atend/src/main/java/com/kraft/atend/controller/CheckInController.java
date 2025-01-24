@@ -19,11 +19,5 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class CheckInController {
 	
-	private final CheckInHandler checkInHandler;
-	
-	@PostMapping("/do-check-in")
-	public ResponseEntity<Boolean> checkIn(@RequestBody CheckInDto checkInDto) throws IOException{
-		return ResponseEntity.ok(checkInHandler.checkIn(checkInDto));
-	}
-
+	 
 }
