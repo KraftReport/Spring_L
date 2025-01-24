@@ -12,5 +12,6 @@ import lombok.Setter;
 public class CheckIn extends BaseEntity {
 	private Long userId;
 	private Long placeId;
+	private String checkInPhoto;
 	private LocalDateTime checkInDateTime = LocalDateTime.now();
 }
