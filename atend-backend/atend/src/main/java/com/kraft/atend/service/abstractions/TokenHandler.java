@@ -6,4 +6,5 @@ import org.springframework.stereotype.Service;
 public abstract class TokenHandler {
 
 	public abstract String generateToken(Long id);
+	public abstract long getUserIdFromToken(String token);
 }

@@ -13,6 +13,10 @@ import com.kraft.atend.repository.OsmRepository;
 import com.kraft.atend.repository.PlaceImagesRepository;
 import com.kraft.atend.service.abstractions.CheckInHandler;
 import com.kraft.atend.service.abstractions.OsmHandler;
+import com.kraft.atend.service.abstractions.TokenHandler;
+
+import jakarta.servlet.http.HttpServletRequest;
+
 import com.kraft.atend.service.abstractions.FileHandler;
 
 import lombok.RequiredArgsConstructor;
@@ -26,6 +30,8 @@ public class CheckInService implements CheckInHandler {
 	private final OsmRepository osmRepository;
 	private final OsmHandler osmHandler;
 	private final PlaceImagesRepository placeImagesRepository;
+	private final HttpServletRequest httpServletRequest;
+	private final TokenHandler tokenHandler;
 	
 	@Override
 	public boolean checkIn(CheckInDto checkInDto) throws IOException {
@@ -52,6 +58,20 @@ public class CheckInService implements CheckInHandler {
 		
  
 		return checkInRepository.save(checkInRecord) != null && placeImagesRepository.save(placesImageRecord) != null;
+	}
+
+	@Override
+	public boolean checkIn(double latitude, double longitude) {
+		var osmResponse = osmHandler.callOsmApi(latitude, longitude);
+		var osmRecord = osmRepository.findByPlaceId(osmResponse.getPlaceId()).orElse(null);
+		if(osmRecord==null) {
+			osmRepository.save(osmResponse);
+		}
+		var userId = tokenHandler.getUserIdFromToken(httpServletRequest.getHeader("Authorization"));
+		var checkInRecord = new CheckIn();
+		checkInRecord.setPlaceId(osmResponse.getPlaceId());
+		checkInRecord.setUserId(userId);
+		return checkInRepository.save(checkInRecord)!= null;
 	}
  
 }

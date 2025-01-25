@@ -1018,3 +1018,111 @@
 2025-01-22 23:30:36,110 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
 2025-01-22 23:31:19,331 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@62c191cc{STOPPING}[12.0.12,sto=0]
 2025-01-22 23:31:19,347 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@2660b59e{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
+2025-01-25 16:21:39,376 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-01-25 16:26:28,852 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-25 16:26:28,937 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:26:28,953 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:27:02,144 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:27:02,149 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:27:02,160 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:29:56,233 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-12.0.12; built: 2024-07-25T21:58:37.668Z; git: cc6f1b74db755fed228b50701ad967aeaa68e83f; jvm 21.0.4+7-LTS
+2025-01-25 16:29:56,387 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started oeje8n.ContextHandler$CoreContextHandler@3d582cbe{/help,/help,b=null,a=AVAILABLE,h=oeje8n.ContextHandler$CoreContextHandler$CoreToNestedHandler@74eab6eb{STARTED}}
+2025-01-25 16:29:56,388 [Start Help Server] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
+2025-01-25 16:29:56,463 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@2b9de9eb{HTTP/1.1, (http/1.1)}{127.0.0.1:59785}
+2025-01-25 16:29:56,535 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@21d2cd98{STARTING}[12.0.12,sto=0] @647625ms
+2025-01-25 16:30:00,894 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-25 16:30:00,906 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:30:00,913 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:30:08,653 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:30:08,658 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:30:08,669 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:31:31,911 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-25 16:31:31,923 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:31:31,929 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:31:40,003 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:31:40,006 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:31:40,014 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:33:08,980 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-25 16:33:08,993 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:33:09,000 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:33:26,488 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:33:26,493 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:33:26,506 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:33:40,309 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-25 16:33:40,324 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:33:40,334 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:33:47,539 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:33:47,542 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:33:47,551 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:34:41,665 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-25 16:34:41,678 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:34:41,686 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:34:56,690 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:34:56,694 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:34:56,706 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:35:04,381 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-25 16:35:04,392 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:35:04,397 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:35:06,942 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:35:06,948 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:35:06,959 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:35:47,687 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-25 16:35:47,696 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:35:47,703 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:35:51,202 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:35:51,204 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:35:51,209 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:36:06,018 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-25 16:36:06,027 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:36:06,032 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:36:18,890 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:36:18,894 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:36:18,902 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:36:23,235 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-25 16:36:23,244 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:36:23,253 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:36:27,152 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:36:27,160 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:36:27,174 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:37:15,017 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-25 16:37:15,027 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:37:15,035 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:37:27,814 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:37:27,815 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:37:27,820 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:38:07,750 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-25 16:38:07,777 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:38:07,789 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:38:13,381 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:38:13,386 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:38:13,396 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:38:22,657 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-25 16:38:22,667 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:38:22,674 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:38:27,263 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:38:27,267 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:38:27,276 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:38:33,208 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-25 16:38:33,222 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:38:33,227 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:38:41,666 [Worker-3: Launching atend - AtendApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:38:41,668 [Worker-3: Launching atend - AtendApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:38:41,673 [Worker-3: Launching atend - AtendApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 16:59:47,364 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-25 16:59:47,404 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 16:59:47,413 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 17:00:00,460 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 17:00:00,462 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 17:00:00,467 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 17:03:26,116 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-25 17:03:26,133 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 17:03:26,145 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 17:03:28,827 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 17:03:28,829 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 17:03:28,835 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 17:03:30,107 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-25 17:03:30,122 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 17:03:30,129 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
+2025-01-25 17:03:33,570 [Worker-16: Launching atend - AtendApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 17:03:33,573 [Worker-16: Launching atend - AtendApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-25 17:03:33,581 [Worker-16: Launching atend - AtendApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\KraftWork\Desktop\SPBWS\Spring_L\atend-backend\atend\src\test\resources
