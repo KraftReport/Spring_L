@@ -11,4 +11,6 @@ public interface CheckInHandler {
  
 	public boolean checkIn(CheckInDto checkInDto) throws IOException;
 	
+	public boolean checkIn(double latitude,double longitude);
+	
 }
