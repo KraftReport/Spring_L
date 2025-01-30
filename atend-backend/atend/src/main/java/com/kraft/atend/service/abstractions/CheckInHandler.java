@@ -13,4 +13,6 @@ public interface CheckInHandler {
 	
 	public boolean checkIn(double latitude,double longitude);
 	
+	public List<>
+	
 }
