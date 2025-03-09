@@ -2,7 +2,9 @@ package com.test.base;
 
 import org.springframework.stereotype.Component;
 
-@Component
+import com.test.util.MyBean;
+
+ 
 public class HelloBean {
 
 	public void sayHello() {

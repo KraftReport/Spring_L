@@ -6,7 +6,7 @@
 <!--	<bean id="helloBean" class="com.test.base.HelloBean">
 	</bean>-->
 	
-	<bean factory-method="build" name="wowbean" class="com.test.base.Factory">
+	<bean factory-method="build" name="wowbean anothername" class="com.test.base.Factory">
 	</bean>
 	
 	
