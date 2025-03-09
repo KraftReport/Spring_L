@@ -1,5 +1,7 @@
 package com.test.base;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.Date;
 
 import org.junit.jupiter.api.Test;
@@ -27,6 +29,9 @@ public class HelloTest {
 			context.refresh();
 			var bean = context.getBean(HelloBean.class);
 			bean.sayHello();
+			var bean1 = context.getBean("anothername");
+			
+			assertEquals(bean,bean1);
 		}
 	}
 
